@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forum", "Forum\Forum.csproj", "{75271731-6A19-40F3-AE1A-A8CD6741732C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ", "Forum\ForumWZ.csproj", "{75271731-6A19-40F3-AE1A-A8CD6741732C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forum.Data", "Forum.Data\Forum.Data.csproj", "{8440A396-4637-46A6-A44A-9314F672208E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ.Data", "Forum.Data\ForumWZ.Data.csproj", "{8440A396-4637-46A6-A44A-9314F672208E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumWZ.Service", "Forum.Service\ForumWZ.Service.csproj", "{CC2FF375-F927-4F84-BEA7-FF15C3363025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8440A396-4637-46A6-A44A-9314F672208E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8440A396-4637-46A6-A44A-9314F672208E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8440A396-4637-46A6-A44A-9314F672208E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2FF375-F927-4F84-BEA7-FF15C3363025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2FF375-F927-4F84-BEA7-FF15C3363025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2FF375-F927-4F84-BEA7-FF15C3363025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2FF375-F927-4F84-BEA7-FF15C3363025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
