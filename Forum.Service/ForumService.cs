@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Forum.Data;
 using Forum.Data.Models;
@@ -10,7 +11,7 @@ namespace Forum.Service
     public class ForumService : IForum
     {
         private readonly ApplicationDbContext _context;
-        private ForumService(ApplicationDbContext context)
+        public ForumService(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -18,7 +19,14 @@ namespace Forum.Service
 
         public Data.Models.Forum GetById(int id)
         {
-            throw new NotImplementedException();
+            var forum = _context.Forums.Where(x => x.Id == id)
+                .Include(x => x.Posts)
+                    .ThenInclude(p => p.User)
+                .Include(x => x.Posts)
+                    .ThenInclude(p => p.PostReplies)//??? w tutorial jest replies do sprawdzenia
+                        .ThenInclude(r => r.User).FirstOrDefault();
+
+            return forum;
         }
 
         public IEnumerable<Data.Models.Forum> GetAll()
