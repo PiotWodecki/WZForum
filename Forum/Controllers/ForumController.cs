@@ -40,7 +40,8 @@ namespace ForumWZ.Controllers
         public IActionResult Topic(int id)
         {
             var forum = _forumService.GetById(id);
-            var posts = _postService.GetPostsByForum(id);
+            //var posts = _postService.GetPostsByForum(id);
+            var posts = forum.Posts;
 
             var postListings = posts.Select(post => new PostListingModel
             {
@@ -58,12 +59,18 @@ namespace ForumWZ.Controllers
                 Posts = postListings,
                 Forum = BuildForumListing(forum)
             };
-            return View();
+            return View(model);
         }
 
         private ForumListingModel BuildForumListing(Post post)
         {
             var forum = post.Forum;
+
+            return BuildForumListing(forum);
+        }
+
+        private ForumListingModel BuildForumListing(Forum.Data.Models.Forum forum)
+        {
 
             return new ForumListingModel
             {
