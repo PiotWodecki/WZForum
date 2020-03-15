@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Forum.Services;
+using ForumWZ.Data;
+using ForumWZ.Service;
 
 
 namespace Forum
@@ -34,6 +36,7 @@ namespace Forum
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddScoped<IForum, ForumService>();
+            services.AddScoped<IPost, PostService>();
 
             services.AddMvc();
         }
