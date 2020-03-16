@@ -47,9 +47,11 @@ namespace ForumWZ.Service
                 .Posts;
         }
 
-        public Task Add(Post post)
+        public async Task Add(Post post)
         {
-            throw new NotImplementedException();
+            _context.Add(post);
+
+            await _context.SaveChangesAsync();
         }
 
         public Task Delete(int id)
