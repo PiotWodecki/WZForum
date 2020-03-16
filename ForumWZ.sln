@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ", "Forum\ForumWZ.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ.Data", "Forum.Data\ForumWZ.Data.csproj", "{8440A396-4637-46A6-A44A-9314F672208E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumWZ.Service", "Forum.Service\ForumWZ.Service.csproj", "{CC2FF375-F927-4F84-BEA7-FF15C3363025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ.Service", "Forum.Service\ForumWZ.Service.csproj", "{CC2FF375-F927-4F84-BEA7-FF15C3363025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
