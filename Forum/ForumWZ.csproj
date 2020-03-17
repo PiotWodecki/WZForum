@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
   </ItemGroup>
@@ -21,6 +22,15 @@
   <ItemGroup>
     <ProjectReference Include="..\Forum.Data\ForumWZ.Data.csproj" />
     <ProjectReference Include="..\Forum.Service\ForumWZ.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="wwwroot\images\forum\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\theme\forum.jpg" />
   </ItemGroup>
 
 </Project>

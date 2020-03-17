@@ -10,6 +10,7 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
+      "workingDirectory": "C:\\Users\\Piotr\\Source\\Repos\\Forum\\Forum",
       "launchBrowser": true,
       "launchUrl": "https://localhost:44353/",
       "environmentVariables": {
