@@ -3,16 +3,64 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Forum.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Forum.Models;
+using ForumWZ.Data;
+using ForumWZ.Models.Forum;
+using ForumWZ.Models.Home;
+using ForumWZ.Models.Post;
 
 namespace Forum.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IPost _postService;
+
+        public HomeController(IPost postService)
+        {
+            _postService = postService;
+        }
+
         public IActionResult Index()
         {
-            return View();
+
+            var model = BuildHomeIndexModel();
+            return View(model);
+        }
+
+        private HomeIndexModel BuildHomeIndexModel()
+        {
+            var latestPosts = _postService.GetLatestPosts(10);
+
+            var posts = latestPosts.Select(post => new PostListingModel
+            {
+                Id = post.ID,
+                Title = post.Title,
+                AuthorName = post.User.UserName,
+                AuthorId = post.User.Id,
+                AuthorRating = post.User.Rating,
+                DatePosted = post.Created.ToString(),
+                RepliesCount = post.PostReplies.Count(),
+                Forum = GetForumListingForPost(post)
+            });
+
+            return new HomeIndexModel
+            {
+                LatestPosts = posts,
+                SearchQuery = ""
+            };
+        }
+
+        private ForumListingModel GetForumListingForPost(Post post)
+        {
+            var forum = post.Forum;
+            return new ForumListingModel
+            {
+                Id = forum.Id,
+                Name = forum.Title,
+                ImageUrl = forum.ImageUrl
+            };
         }
 
         public IActionResult About()
@@ -34,4 +82,5 @@ namespace Forum.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
 }
