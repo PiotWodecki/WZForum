@@ -59,8 +59,8 @@
             @if (!SignInManager.IsSignedIn(User))
             {
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-controller="Account" asp-action="Login">SIGN IN</a></li>
-                    <li class="active"><a asp-controller="Account" asp-action="Register">REGISTER</a></li>
+                    <li><a asp-controller="Account" asp-action="Login">Sign in</a></li>
+                    <li class="active"><a asp-controller="Account" asp-action="Register">Register</a></li>
                 </ul>
             }
             @if (SignInManager.IsSignedIn(User))
@@ -73,7 +73,7 @@
                     </ul>
                 @*</form>*@
             }
-                    @await Html.PartialAsync("_LoginPartial")
+                    @*@await Html.PartialAsync("_LoginPartial")*@
                 </div>
             </div>
             </nav>

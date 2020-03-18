@@ -27,6 +27,7 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="wwwroot\images\forum\" />
+    <Folder Include="wwwroot\images\users\" />
   </ItemGroup>
 
   <ItemGroup>

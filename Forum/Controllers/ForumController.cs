@@ -14,7 +14,7 @@ namespace ForumWZ.Controllers
     public class ForumController : Controller
     {
         private readonly IForum _forumService;
-        private readonly IPost _postService;
+        //private readonly IPost _postService;
         public ForumController(IForum forumService)
         {
             _forumService = forumService; //potrzebne do dependency injection
