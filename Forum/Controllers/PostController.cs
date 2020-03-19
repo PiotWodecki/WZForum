@@ -38,9 +38,17 @@ namespace ForumWZ.Controllers
                 AuthorRating = post.User.Rating,
                 Created = post.Created,
                 PostContent = post.Content,
-                Replies = replies
+                Replies = replies,
+                ForumId = post.Forum.Id,
+                ForumName = post.Forum.Title,
+                IsAuthorAdmin = IsAuthorAdmin(post.User)
             };
             return View(model);
+        }
+
+        private bool IsAuthorAdmin(ApplicationUser user)
+        {
+            return _userManager.GetRolesAsync(user).Result.Contains("Admin");
         }
 
         public IActionResult Create(int id)//id forum, nie posta
@@ -98,6 +106,7 @@ namespace ForumWZ.Controllers
                 AuthorRating = reply.User.Rating,
                 Created = reply.Created,
                 ReplyContent = reply.Content,
+                IsAuthorAdmin = IsAuthorAdmin(reply.User)
                 //PostId = reply.Post.ID
             });
 

@@ -16,7 +16,9 @@ namespace ForumWZ.Models.Post
         public int AuthorRating { get; set; }
         public DateTime Created { get; set; }
         public string PostContent { get; set; }
-
+        public int ForumId { get; set; }
+        public string ForumName { get; set; }
+        public bool IsAuthorAdmin { get; set; }
         public IEnumerable<PostReplyModel> Replies { get; set; }
     }
 }
