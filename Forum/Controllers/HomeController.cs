@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Forum.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Forum.Models;
-using ForumWZ.Data;
 using ForumWZ.Models.Forum;
 using ForumWZ.Models.Home;
 using ForumWZ.Models.Post;
+using Forum.Data;
 
 namespace Forum.Controllers
 {

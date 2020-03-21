@@ -4,13 +4,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Forum.Data.Models;
 
-namespace ForumWZ.Data
+namespace Forum.Data
 {
     public interface IPost
     {
         Post GetById(int id);
         IEnumerable<Post> GetAll();
-        IEnumerable<Post> GetFilteredPosts(string searchQuery);
+        IEnumerable<Post> GetFilteredPosts(Models.Forum forum,string searchQuery);
         IEnumerable<Post> GetPostsByForum(int id);
         IEnumerable<Post> GetLatestPosts(int n);
 

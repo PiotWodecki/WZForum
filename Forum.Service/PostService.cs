@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Forum.Data;
 using Forum.Data.Models;
-using ForumWZ.Data;
+using Forum.Data;
 using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.EntityFrameworkCore;
 
-namespace ForumWZ.Service
+namespace Forum.Service
 {
     public class PostService : IPost
     {
@@ -39,9 +39,12 @@ namespace ForumWZ.Service
                 .Include(post => post.Forum);
         }
 
-        public IEnumerable<Post> GetFilteredPosts(string searchQuery)
+        public IEnumerable<Post> GetFilteredPosts(Data.Models.Forum forum, string searchQuery)
         {
-            throw new NotImplementedException();
+            return string.IsNullOrEmpty(searchQuery)
+                ? forum.Posts 
+                : forum.Posts.Where(post => post.Title.Contains(searchQuery) 
+                || post.Content.Contains(searchQuery)); 
         }
 
         public IEnumerable<Post> GetPostsByForum(int id)

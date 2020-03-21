@@ -8,8 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Forum.Services;
-using ForumWZ.Data;
-using ForumWZ.Service;
+
 
 
 namespace Forum
