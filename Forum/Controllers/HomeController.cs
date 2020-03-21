@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using Forum.Data.Models;
 using Microsoft.AspNetCore.Mvc;
-using Forum.Models;
 using ForumWZ.Models.Forum;
 using ForumWZ.Models.Home;
 using ForumWZ.Models.Post;
-using Forum.Data;
+using ForumWZ.Data.Models;
+using ForumWZ.Data;
+using ForumWZ.Models;
 
-namespace Forum.Controllers
+namespace ForumWZ.Controllers
 {
     public class HomeController : Controller
     {

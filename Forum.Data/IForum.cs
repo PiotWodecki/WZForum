@@ -1,10 +1,10 @@
-﻿using System;
+﻿using ForumWZ.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Forum.Data.Models;
 
 
-namespace Forum.Data
+namespace ForumWZ.Data
 {
     public interface IForum
     {

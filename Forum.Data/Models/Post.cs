@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Forum.Data.Models
+namespace ForumWZ.Data.Models
 {
     public class Post
     {

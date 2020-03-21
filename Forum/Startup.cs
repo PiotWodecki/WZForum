@@ -1,17 +1,15 @@
-﻿using Forum.Data;
-using Forum.Data.Models;
-using Forum.Service;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Forum.Services;
+using ForumWZ.Data;
+using ForumWZ.Data.Models;
+using ForumWZ.Service;
+using ForumWZ.Services;
 
-
-
-namespace Forum
+namespace ForumWZ
 {
     public class Startup
     {

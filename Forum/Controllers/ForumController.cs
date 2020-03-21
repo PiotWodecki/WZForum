@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Forum.Data;
-using Forum.Data.Models;
+using ForumWZ.Data;
+using ForumWZ.Data.Models;
 using ForumWZ.Models.Forum;
 using ForumWZ.Models.Post;
 using Microsoft.AspNetCore.Mvc;
@@ -78,7 +76,7 @@ namespace ForumWZ.Controllers
             return BuildForumListing(forum);
         }
 
-        private ForumListingModel BuildForumListing(Forum.Data.Models.Forum forum)
+        private ForumListingModel BuildForumListing(Data.Models.Forum forum)
         {
 
             return new ForumListingModel

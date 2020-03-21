@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Forum.Data.Models;
+﻿using ForumWZ.Data;
+using ForumWZ.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,9 +18,12 @@ namespace ForumWZ.Controllers
         }
         public IActionResult Detail(string id)
         {
+            //var model = new ProfileModel()
+            //{
 
+            //};
 
-            return View();
+            return View(/*model*/);
         }
     }
 }

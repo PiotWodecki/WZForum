@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Forum.Services
+namespace ForumWZ.Services
 {
     public interface IEmailSender
     {

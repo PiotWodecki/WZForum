@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace Forum.Data.Models
+namespace ForumWZ.Data.Models
 {
     public class Forum
     {

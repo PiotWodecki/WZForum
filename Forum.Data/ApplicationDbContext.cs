@@ -1,8 +1,8 @@
-﻿using Forum.Data.Models;
+﻿using ForumWZ.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Forum.Data
+namespace ForumWZ.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

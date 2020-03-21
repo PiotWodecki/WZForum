@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Forum.Models.AccountViewModels
+
+namespace ForumWZ.Models.AccountViewModels
 {
     public class ExternalLoginViewModel
     {

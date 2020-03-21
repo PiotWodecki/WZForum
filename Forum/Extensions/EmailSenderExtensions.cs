@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using Forum.Services;
 
-namespace Forum.Services
+namespace ForumWZ.Services
 {
     public static class EmailSenderExtensions
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Forum.Models.ManageViewModels
+namespace ForumWZ.Models.ManageViewModels
 {
     public class EnableAuthenticatorViewModel
     {

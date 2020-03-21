@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using Forum.Data.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Forum.Models;
-using Forum.Models.ManageViewModels;
-using Forum.Services;
+using ForumWZ.Models.ManageViewModels;
+using ForumWZ.Data.Models;
+using ForumWZ.Services;
 
-namespace Forum.Controllers
+namespace ForumWZ.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Forum.Data;
-using Forum.Data.Models;
+using ForumWZ.Data;
+using ForumWZ.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Forum.Service
+namespace ForumWZ.Service
 {
     public class ForumService : IForum
     {

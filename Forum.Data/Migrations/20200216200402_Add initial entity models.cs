@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace Forum.Data.Migrations
+namespace ForumWZ.Data.Migrations
 {
     public partial class Addinitialentitymodels : Migration
     {

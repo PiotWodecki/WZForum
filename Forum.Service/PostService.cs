@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Forum.Data;
-using Forum.Data.Models;
-using Forum.Data;
-using Microsoft.AspNetCore.Hosting.Internal;
+using ForumWZ.Data;
+using ForumWZ.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Forum.Service
+namespace ForumWZ.Service
 {
     public class PostService : IPost
     {
