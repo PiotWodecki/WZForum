@@ -14,6 +14,7 @@ namespace ForumWZ.Models.ApplicationUser
         public string UserRating { get; set; }
         public string ProfileImageUrl { get; set; }
         public DateTime MemberSince { get; set; }
+        public bool IsAdmin { get; set; }
 
         public IFormFile ImageUpload { get; set; }
     }
