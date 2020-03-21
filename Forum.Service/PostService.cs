@@ -80,5 +80,12 @@ namespace Forum.Service
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Post> GetFilteredPosts(string searchQuery)
+        {
+            return GetAll().Where
+                (post => post.Title.Contains(searchQuery) 
+                || post.Content.Contains(searchQuery));
+        }
     }
 }
