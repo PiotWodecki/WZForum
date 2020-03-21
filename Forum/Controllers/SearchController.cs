@@ -44,7 +44,7 @@ namespace ForumWZ.Controllers
                 EmptySearchResults = areNoResults
             };
 
-            return View();
+            return View(model);
         }
 
         private ForumListingModel BuildForumListing(Post post)
