@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ForumWZ.Data;
 
 namespace ForumWZ.Service
 {
-    public class UploadService
+    public class UploadService : IUpload
     {
     }
 }
