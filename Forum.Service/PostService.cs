@@ -75,9 +75,11 @@ namespace ForumWZ.Service
             throw new NotImplementedException();
         }
 
-        public Task AddReply(PostReply reply)
+        public async Task AddReply(PostReply reply)
         {
-            throw new NotImplementedException();
+            _context.Add(reply);
+
+            await _context.SaveChangesAsync();
         }
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
