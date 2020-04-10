@@ -13,7 +13,7 @@ namespace ForumWZ.Data
     {
         private ApplicationDbContext _context;
 
-        public DataSeeder(ApplicationDbContext context)
+      public DataSeeder(ApplicationDbContext context)
         {
             _context = context;
         }

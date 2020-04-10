@@ -26,19 +26,20 @@
                 </form>
             }
         </div>
-    </div>
-    <div class="col-md-8">
-        <span id="userName">
-            @Model.UserName
-        </span>
-        @if(Model.IsAdmin)
-        {
-            <span class="isAdmin">
-                Admin
+        <div class="col-md-8">
+            <span id="userName">
+                @Model.UserName
             </span>
-        }
-        <span id="userRating">Current rating: @Model.UserRating</span>
-        <span id="userEmailLabel">Email: @Model.Email</span>
-        <span id="userCreatedLabel">Member Since: @Model.MemberSince</span>
+            @if (Model.IsAdmin)
+            {
+                <span class="isAdmin">
+                    Admin
+                </span>
+            }
+            <span id="userRating">Current rating: @Model.UserRating</span>
+            <span id="userEmailLabel">Email: @Model.Email</span>
+            <span id="userCreatedLabel">Member Since: @Model.MemberSince</span>
+        </div>
     </div>
+    
 </div>

@@ -44,13 +44,13 @@
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Profile</li>
-                            <li><a asp-controller="Profile" asp-action="Detail">My profile</a></li>
+                            <li><a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">My profile</a></li>
                             @if (User.IsInRole("Admin"))
                             {
                                 <li role="separator" class="divider"></li>
                                 <li class="dropdown-header">Admin</li>
                                 <li><a asp-controller="Forum" asp-action="Create">Create Forum</a></li>
-                                <li><a asp-controller="Profile" asp-action="Index">Create Forum</a></li>
+                                <li><a asp-controller="Profile" asp-action="Index">View Users</a></li>
                             }
                         </ul>
                     </li>

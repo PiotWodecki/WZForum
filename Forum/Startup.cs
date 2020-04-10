@@ -36,6 +36,7 @@ namespace ForumWZ
             services.AddScoped<IPost, PostService>();
             services.AddScoped<IUpload, UploadService>();
             services.AddScoped<IApplicationUser, ApplicationUserService>();
+            services.AddSingleton(Configuration);
 
             services.AddTransient<DataSeeder>();
 
