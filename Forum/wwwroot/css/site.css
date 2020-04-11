@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color:white
+    color: black;
 }
 
 .navbar
@@ -196,6 +196,10 @@
     border-left: 1px solid #ddd;
 }
 
+.postContent {
+    color: #000000;
+}
+
 .postAuthorRating{
     font-size: 0.9em;
     color: #159;
@@ -210,6 +214,11 @@
 .postHeader{
     background-color: #212121;
     padding: 8px 0px 24px 24px;
+}
+
+#replyDivider {
+    height: 2px;
+    margin-bottom: 12px;
 }
 
 #headingBtn{
@@ -267,6 +276,13 @@
     background-color: #00897B !important;
     color: #fff !important
 }
+
+.authorBlock {
+    padding: 18px;
+    border: 1px dashed #00AFCF;
+    color: black;
+}
+
 
 .btn-forumSearch{
     background-color: none !important;
@@ -374,10 +390,63 @@
     padding: 24px;
 }
 
+
+/*User Profile Index*/
+.userProfilePic {
+    height: 140px;
+    width: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+#userProfileImage {
+    background-size: 100%;
+}
+
+.fillSquare {
+    background-size: 100%;
+}
+
 /*wrapping element*/
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/*Replies*/
+
+.replyContent {
+    display: table;
+    background-color: #fff;
+    border-bottom: 1px solid #aaa;
+    width: inherit;
+}
+
+#postReplyRow {
+    background-color: #3F51B5;
+    padding: 8px;
+}
+
+.replyContentContainer, .replyAuthorContainer {
+    display: table-cell;
+    padding: 12px;
+}
+
+.isAdmin {
+    display: inline-block;
+    padding: 3px;
+    background-color: #FFEB3B;
+    color: #000;
+    font-family: 'Roboto Mono'
+}
+
+.smaller {
+    font-size: 0.8em;
+}
+
+.originalPost {
+    background-color: white;
+    padding: 8px;
 }
 
 /*carousel*/

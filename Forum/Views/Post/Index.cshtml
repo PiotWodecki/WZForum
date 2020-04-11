@@ -18,7 +18,7 @@
             <a asp-controller="Profile" asp-action="Detail" asp-route-id="@Model.AuthorId">
                 @Model.AuthorName
             </a> <br />
-            <span class="postDate">@Model.Created</span>
+            <span class="postDate">@Model.Created.ToString("dd/MM/yyyy HH:mm")</span>
             @if(Model.IsAuthorAdmin)
              {
                 <span class="isAdmin smaller">Admin</span>
@@ -35,7 +35,7 @@
 
 @if(User.Identity.IsAuthenticated)
 {
-    <div class="row">
+    <div class="row" id="postReplyRow">
         <span>
             <a asp-controller="Reply" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-newReply">
                 Post Reply
@@ -49,17 +49,18 @@
     foreach(var reply in Model.Replies)
     {
         <div class="row replyContent">
-            <div class="col-md-3 replyAuthorContainer" >
+            <div class="col-md-3 replyAuthorContainer">
                 <div class="postAuthorImage" style="background-image: url(@reply.AuthorImageUrl)"></div>
                 <a asp-controller="Profile" asp-action="Detail" asp-route-id="@reply.AuthorId">
                     @reply.AuthorName
                 </a>
-                @if(reply.IsAuthorAdmin)
+                @if (reply.IsAuthorAdmin)
                 {
                     <div class="isAdmin smaller">Admin</div>
-                    <br />
+
                 }
-                <span>@reply.Created</span>
+                <br />
+                <span class="postDate">@reply.Created.ToString("dd/MM/yyyy HH:mm")</span>
             </div>
             <div class="col-md-9 replyContentContainer">
                 <div class="postContent">
