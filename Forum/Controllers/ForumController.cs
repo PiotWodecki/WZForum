@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Primitives;
 using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace ForumWZ.Controllers
@@ -113,11 +114,11 @@ namespace ForumWZ.Controllers
         private CloudBlockBlob UploadForumImage(IFormFile file)
         {
             var connectionString = _configuration.GetConnectionString("AzureStorageAccount");
-            var container = _uploadService.GetBlobContainer(connectionString);
+            var container = _uploadService.GetBlobContainer(connectionString, "forum-images");
             var contentDisposition = ContentDispositionHeaderValue.Parse(file.ContentDisposition);
-            var filename = contentDisposition.FileName.Trim().ToString();
+            var filename = contentDisposition.FileName.Trim('"');
             var blockBlob = container.GetBlockBlobReference(filename);
-            blockBlob.UploadFromStreamAsync(file.OpenReadStream());
+            blockBlob.UploadFromStreamAsync(file.OpenReadStream()).Wait();
 
             return blockBlob;
         }
