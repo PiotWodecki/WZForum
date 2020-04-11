@@ -35,7 +35,8 @@ namespace ForumWZ.Controllers
                 Email = user.Email,
                 ProfileImageUrl = user.ProfileImageUrl,
                 MemberSince = user.MemberSince,
-                IsAdmin = userRoles.Contains("Admin")
+                IsAdmin = userRoles.Contains("Admin"),
+                UserRating = user.Rating.ToString()
             };
 
             return View(model);
