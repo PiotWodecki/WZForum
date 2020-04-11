@@ -40,14 +40,19 @@ namespace ForumWZ.Service
             throw new NotImplementedException();
         }
 
-        public Task Create(Data.Models.Forum forum)
+        public async Task Create(Data.Models.Forum forum)
         {
-            throw new NotImplementedException();
+            _context.Add(forum);
+
+            await _context.SaveChangesAsync();
         }
 
-        public Task Delete(int forumId)
+        public async Task Delete(int forumId)
         {
-            throw new NotImplementedException();
+            var forum = GetById(forumId);
+            _context.Remove(forum);
+
+            await _context.SaveChangesAsync();
         }
 
         public Task UpdateForumTitle(int forumId, string newTitle)
