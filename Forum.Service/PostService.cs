@@ -77,7 +77,7 @@ namespace ForumWZ.Service
 
         public async Task AddReply(PostReply reply)
         {
-            _context.Add(reply);
+            _context.PostReplies.Add(reply);
 
             await _context.SaveChangesAsync();
         }
