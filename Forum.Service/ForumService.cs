@@ -35,10 +35,21 @@ namespace ForumWZ.Service
                 .Include(forum => forum.Posts);
         }
 
-        public IEnumerable<ApplicationUser> GetAllActiveUsers()
+        public IEnumerable<ApplicationUser> GetAllActiveUsers(int id)
         {
-            throw new NotImplementedException();
+            var posts = GetById(id).Posts;
+
+            if (posts != null || !posts.Any())
+            {
+                var postUsers = posts.Select(p => p.User);
+                var replyUsers = posts.SelectMany(p => p.PostReplies).Select(r => r.User);
+
+                return postUsers.Union(replyUsers).Distinct();
+            }
+
+            return new List<ApplicationUser>();
         }
+
 
         public async Task Create(Data.Models.Forum forum)
         {
@@ -63,6 +74,14 @@ namespace ForumWZ.Service
         public Task UpdateForumDescription(int forumId, string newDescription)
         {
             throw new NotImplementedException();
+        }
+
+        public bool HasRecentPosts(int forumId)
+        {
+            const int hoursAgo = 12;
+            var window = DateTime.Now.AddHours(hoursAgo);
+
+            return GetById(forumId).Posts.Any(post => post.Created < window);
         }
     }
 }

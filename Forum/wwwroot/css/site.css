@@ -240,6 +240,16 @@
     background-color: #1E88E5 !important;
 }
 
+.hasRecentPost {
+    color: white;
+    background-color: #f44336;
+    font-family: 'Roboto Mono';
+    padding: 2px 5px 2px 5px;
+    border-radius: 1px;
+    text-align: center;
+    width: 30px;
+}
+
 .btn-newReply {
     background-color: #5C6BC0 !important;
     color: #fff !important;

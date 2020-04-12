@@ -38,11 +38,15 @@ namespace ForumWZ.Controllers
             {
                 Id = forum.Id,
                 Name = forum.Title,
-                Description = forum.Description
+                Description = forum.Description,
+                NumberOfPosts = forum.Posts?.Count() ?? 0,
+                NumberOfUsers = _forumService.GetAllActiveUsers(forum.Id).Count(),
+                ImageUrl = forum.ImageUrl,
+                HasRecentPosts = _forumService.HasRecentPosts(forum.Id)
             });
             var model = new ForumIndexModel
             {
-                ForumList = forums
+                ForumList = forums.OrderBy(f => f.Name)
             };
             return View(model);
         }
