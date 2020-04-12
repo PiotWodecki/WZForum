@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using ForumWZ.Data;
 using ForumWZ.Data.Models;
 using ForumWZ.Models.Reply;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ForumWZ.Controllers
 {
+    [Authorize]
     public class ReplyController : Controller
     {
         private readonly IPost _postService;

@@ -7,7 +7,9 @@ using ForumWZ.Data;
 using ForumWZ.Data.Models;
 using ForumWZ.Models.Forum;
 using ForumWZ.Models.Post;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.Extensions.Configuration;
@@ -84,6 +86,7 @@ namespace ForumWZ.Controllers
             return RedirectToAction("Topic", new { id, searchQuery });
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             var model = new AddForumModel();
@@ -92,6 +95,7 @@ namespace ForumWZ.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddForum(AddForumModel model)
         {
             var imageUri = "/images/users/default.jpg";

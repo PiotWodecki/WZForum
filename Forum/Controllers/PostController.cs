@@ -6,6 +6,7 @@ using ForumWZ.Data;
 using ForumWZ.Data.Models;
 using ForumWZ.Models.Post;
 using ForumWZ.Models.Reply;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,6 +53,7 @@ namespace ForumWZ.Controllers
             return _userManager.GetRolesAsync(user).Result.Contains("Admin");
         }
 
+        [Authorize]
         public IActionResult Create(int id)//id forum, nie posta
         {
             var forum = _forumService.GetById(id);
@@ -69,6 +71,7 @@ namespace ForumWZ.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddPost(NewPostModel model)
         {
             var userId = _userManager.GetUserId(User);

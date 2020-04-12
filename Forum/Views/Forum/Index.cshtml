@@ -20,8 +20,10 @@
                 @foreach (var forum in Model.ForumList)
                 {
                     <tr>
+                    <td>
+                        <div class="forumLogo" style="background-image: url(@forum.ImageUrl);"></div>
+                    </td>
                         <td>
-                            <div class="forumLogo" style="background-image: url(@forum.ImageUrl);"></div>
                             <div class="forumData">
                                 <div class="forumTitle">
                                     <a asp-controller="Forum" asp-action="Topic" asp-route-id="@forum.Id">@forum.Name</a>

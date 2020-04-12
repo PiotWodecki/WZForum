@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Net.Http.Headers;
 
 namespace ForumWZ.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -66,6 +68,7 @@ namespace ForumWZ.Controllers
             return RedirectToAction("Detail", "Profile", new {id = userId});
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var profiles = _userService.GetAll()
