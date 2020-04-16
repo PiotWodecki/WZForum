@@ -52,6 +52,8 @@ namespace ForumWZ
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
 
+            services.AddProgressiveWebApp();
+
 
         }
 

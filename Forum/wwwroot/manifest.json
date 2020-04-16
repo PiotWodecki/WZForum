@@ -1,0 +1,50 @@
+{
+  "name": "Forum Wydzia³u Zarz¹dzania Akademii Górniczo - Hutniczej w Krakowie",
+  "short_name": "Forum WZ",
+  "description": "Forum for AGH's students",
+  "icons": [
+    {
+      "src": "/images/manifest/wz-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/images/manifest/wz-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/images/manifest/wz-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/images/manifest/wz-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/manifest/wz-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/images/manifest/wz-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/images/manifest/wz-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "/",
+  "scope": ".",
+  "orientation": "portrait-primary",
+  "background_color": "#D3D3D3",
+  "theme_color": "white",
+  "dir": "ltr",
+  "lang": "pl-PL"
+}
