@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ", "Forum\ForumWZ.csproj", "{75271731-6A19-40F3-AE1A-A8CD6741732C}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ.Data", "Forum.Data\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ.Service", "Forum.Service\ForumWZ.Service.csproj", "{CC2FF375-F927-4F84-BEA7-FF15C3363025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumWZ.Tests", "ForumWZ.Tests\ForumWZ.Tests.csproj", "{54523337-74FE-4872-8257-9DCF0306249B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWZ.Tests", "ForumWZ.Tests\ForumWZ.Tests.csproj", "{54523337-74FE-4872-8257-9DCF0306249B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

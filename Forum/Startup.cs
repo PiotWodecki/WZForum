@@ -8,6 +8,7 @@ using ForumWZ.Data;
 using ForumWZ.Data.Models;
 using ForumWZ.Service;
 using ForumWZ.Services;
+using Microsoft.Extensions.Hosting;
 
 namespace ForumWZ
 {
@@ -40,17 +41,28 @@ namespace ForumWZ
 
             services.AddTransient<DataSeeder>();
 
-            services.AddMvc();
+            //services.AddMvc();
+
+            //services.AddMvc().AddRazorPagesOptions(options =>
+            //{
+            //    options.Conventions.AddPageRoute("/Home/Index", "");
+            //});
+
+            //services.AddRazorPages();
+
+            services.AddMvc(option => option.EnableEndpointRouting = false);
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DataSeeder dataSeeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataSeeder dataSeeder)
         {
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
+                //app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                //app.UseDatabaseErrorPage();
             }
             else
             {
@@ -59,9 +71,32 @@ namespace ForumWZ
 
             dataSeeder.SeedSuperUser();
 
+            app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            app.UseRouting();
+            app.UseAuthorization();
+
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    // Mapping of endpoints goes here:
+            //    //endpoints.MapRazorPages();
+            //    endpoints.MapControllerRoute("default", "{ controller = Home}/{ action = Index}/{ id ?}");
+            //});
+
+
+
+            //app.UseEndpoints(endpoints => endpoints.MapControllers(
+            //{
+            //    name:
+            //    "default",
+            //    template:
+            //    "{controller=Home}/{action=Index}/{id?}"
+            //}));
 
             app.UseMvc(routes =>
             {
@@ -69,6 +104,11 @@ namespace ForumWZ
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //});
         }
     }
 }

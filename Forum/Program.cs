@@ -19,9 +19,10 @@ namespace ForumWZ
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:5566")
                 .ConfigureAppConfiguration((builderContext, config) =>
                 {
-                    IHostingEnvironment env = builderContext.HostingEnvironment;
+                    IWebHostEnvironment env = builderContext.HostingEnvironment;
                     config.AddJsonFile("storageSettings.json", optional:false, reloadOnChange:true);
                 })
                 .UseStartup<Startup>()
