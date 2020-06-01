@@ -1,7 +1,7 @@
 ﻿body {
     padding: 50px 0 20px 0;
     background-color: black;
-    background-image: url("/images/theme/zorza.jpg");
+    background-image: url("/images/theme/agh2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -55,11 +55,12 @@
 }
 
 .frontPageSplash {
-    background-image: url("../images/theme/board.jpg");
+    background-image: url("../images/theme/dinozaur.JPG");
     background-repeat: no-repeat;
-    background-position: right;
-    padding: 16px 16px;
+    /*padding: 16px 16px;*/
     margin: 0 0 0 0.5px;
+    background-position: center;
+    background-size: 100%;
 }
 
 .frontPageLearn{
@@ -335,14 +336,14 @@
 .forumLogo {
     border-radius: 3px;
     float: left;
-    /*margin-right: 20px;*/
+    margin-right: 20px;
     height: 40px;
     width: 40px;
     background-color: #ddd;
     border: 1px solid #555;
     background-size: 100%;
-    margin: 20px auto;
-}
+    /*margin: 20px auto;*/
+}Ffron
 
 .forumPostCount {
     color: #888;
