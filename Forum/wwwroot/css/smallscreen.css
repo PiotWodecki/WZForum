@@ -2,36 +2,17 @@
     padding: 50px 0 20px 0;
     background-color: black;
     background-image: url("/images/theme/agh2.jpg");
-    background-size: 100%;
+    /*background-size: 100%;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     color: black;
 }
 
-.navbar { box-shadow: 0 5px 4px -6px #000; }
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+.navbar {
+    box-shadow: 0 5px 4px -6px #000;
+    overflow: hidden;
 }
-
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar-links li {
-    list-style: none;
-
-}
-
-.navbar-links li a {
-    text-decoration: none;
-    padding: 1rem;
-    display: block;
-}*/
 
 .navLogo {
     background-image: url("/images/zarzadzanie.png");
@@ -43,16 +24,16 @@
     background-position: center;
 }
 
-.navbar li{
+.navbar li {
     font-weight: bold;
 }
 
-.sectionHeader{
+.sectionHeader {
     background-color: rgba(0,0,0,0.9);
     padding: 8px 0 24px 24px;
 }
 
-.sectionHeading{
+.sectionHeading {
     color: white;
     font-size: 1.3em;
     font-family: 'Roboto';
@@ -68,56 +49,57 @@
     padding: 16px 0 16px 0;
 }
 
-.sectionInfo{
+.sectionInfo {
     height: 400px;
     background-color: white;
 }
-
 
 .frontPageSplash {
     background-image: url("../images/theme/dinozaurwyciety.png");
     background-repeat: no-repeat;
     /*padding: 16px 16px;*/
-    margin: 0 0 0 0.5px;
+    margin: 0;
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-color: rgba(252,242,237,0.5)
 }
 
-.frontPageLearn{
-    font-family:'Roboto';
+.frontPageLearn {
+    font-family: 'Roboto';
     padding: 12px 0 0 32px;
     height: 360px;
 }
 
-.sectionDescription{
+.sectionDescription {
     color: #EEE;
 }
 
-.frontPageHeading{
-    font-size: 3.2em;
+.frontPageHeading {
+    font-size: 1.4em;
     margin: 16px 0;
+    width: 50%;
     color: red;
     font-weight: bold;
-
 }
 
 .frontPageSubHeading {
-    font-size: 2em;
+    font-size: 1.15em;
+    width: 50%;
+    color: black;
 }
 
-.frontPageTopContainer{
+.frontPageTopContainer {
     padding: 44px 80px 40px 20px;
     border: 1px solid #999;
     background-color: #2569D5;
     font-family: 'Roboto';
-    width:1000px;
+    width: 1000px;
 }
 
-.homeSearch{
-    width: 100%;
+/*.homeSearch {
+    width: 60%;
     margin-top: 8px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(250, 0, 0, 0.6);
     padding: 8px;
     border: 0;
     height: 2.3em;
@@ -125,36 +107,36 @@
     font-family: 'Roboto Mono';
     font-weight: bold;
     transition: ease-in 0.2s;
-}
+}*/
 
 ::placeholder {
     color: black;
 }
 
-.homeSearch:focus{
-    border: none !important;
-    outline: none !important;
-    transition: ease-in 0.2s;
-    color: #03A9F4;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 5px 4px -6px #000;
-}
+    .homeSearch:focus {
+        border: none !important;
+        outline: none !important;
+        transition: ease-in 0.2s;
+        color: #03A9F4;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 5px 4px -6px #000;
+    }
 
 .frontPageContent {
     background-color: rgba(255,255,255,0.9);
     padding: 16px;
 }
 
-#latestPosts{
-    font-size:1.2em;
+#latestPosts {
+    font-size: 1.2em;
     font-weight: bold;
-    color:#333;
+    color: #333;
     margin: 4px 0 16px 0;
 }
 
 /*Forum topic page*/
 
-.searchBar{
+.searchBar {
     padding: 3px 5px 2px 12px;
     margin: 8px;
     background-color: #333;
@@ -163,35 +145,36 @@
     border: none;
 }
 
-.searchBar:focus{
-    color: black;
-    width: 60%;
-    background-color: #fff;
-}
+    .searchBar:focus {
+        color: black;
+        width: 60%;
+        background-color: #fff;
+    }
 /*Post Page*/
 
-.postTitle{
-    font-family:'Roboto';
+.postTitle {
+    font-family: 'Roboto';
     font-weight: bold;
 }
 
-.postSubTitle{
+.postSubTitle {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.8em;
+    margin-left: 60px;
+}
+
+.postData {
+    display: inline-block;
+}
+
+.postDate {
     color: #888;
     font-family: 'Roboto Mono';
     font-size: 0.8em;
 }
 
-.postData{
-    display:inline-block;
-}
-
-.postDate{
-    color: #888;
-    font-family: 'Roboto Mono';
-    font-size: 0.8em;
-}
-
-.postLogo{
+.postLogo {
     display: inline-block;
     border-radius: 3px;
     margin-right: 20px;
@@ -200,25 +183,25 @@
     background-color: #ddd;
 }
 
-.postAuthorImage{
+.postAuthorImage {
     height: 80px;
     width: 80px;
-    background-size:100%;
-    margin-top:10px;
+    background-size: 100%;
+    margin-top: 10px;
 }
 
-.postAuthorContainer{
-    padding:12px;
+.postAuthorContainer {
+    padding: 12px;
     color: #444;
     font-family: 'Roboto';
-    width:190px;
+    width: 190px;
 }
 
-.postIndexTitle{
-    font-size:1.4em;
+.postIndexTitle {
+    font-size: 1.4em;
 }
 
-.postContentContainer{
+.postContentContainer {
     font-family: 'Roboto';
     color: #222;
     padding: 22px;
@@ -229,18 +212,18 @@
     color: #000000;
 }
 
-.postAuthorRating{
+.postAuthorRating {
     font-size: 0.9em;
     color: #159;
     font-family: 'Roboto'
 }
 
-#postIndexContent{
-     background-color: white;
-     box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.3)
+#postIndexContent {
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.3)
 }
 
-.postHeader{
+.postHeader {
     background-color: #212121;
     padding: 8px 0px 24px 24px;
 }
@@ -250,24 +233,24 @@
     margin-bottom: 12px;
 }
 
-#headingBtn{
-    float:right;
+#headingBtn {
+    float: right;
     margin-right: 20px;
 }
 
 /* Custom button styling*/
 
-.btn-back{
+.btn-back {
     background-color: #555;
     color: #fff !important;
     transition: ease-in 0.1s;
     border-radius: 0px !important;
 }
 
-.btn-back:hover{
-    transition: ease-in 0.1s;
-    background-color: #1E88E5 !important;
-}
+    .btn-back:hover {
+        transition: ease-in 0.1s;
+        background-color: #1E88E5 !important;
+    }
 
 .hasRecentPost {
     color: white;
@@ -286,26 +269,22 @@
     border-radius: 0px !important;
 }
 
-.btn-newReply:hover {
-    transition: ease-in 0.1s;
-    background-color: #9FA8DA !important;
-}
+    .btn-newReply:hover {
+        transition: ease-in 0.1s;
+        background-color: #9FA8DA !important;
+    }
 
 .btn-file {
     background-color: #4FC3F7;
     color: white;
     transition: ease 0.3s;
-    width: 200px;
+    width: 160px;
 }
 
-.btn-file:hover {
-    transition: ease 0.3s;
-    background-color: #039BE5;
-}
-
-#btn-profile {
-    width: 200px;
-}
+    .btn-file:hover {
+        transition: ease 0.3s;
+        background-color: #039BE5;
+    }
 
 .btn-submitPost {
     background-color: #00695C !important;
@@ -314,12 +293,15 @@
     border-radius: 0px !important;
 }
 
-.btn-submitPost:hover {
-    transition: ease-in 0.1s;
-    background-color: #00897B !important;
-    color: #fff !important
-}
+    .btn-submitPost:hover {
+        transition: ease-in 0.1s;
+        background-color: #00897B !important;
+        color: #fff !important
+    }
 
+#btn-profile {
+    width: 160px;
+}
 .authorBlock {
     padding: 18px;
     border: 1px dashed #00AFCF;
@@ -327,7 +309,7 @@
 }
 
 
-.btn-forumSearch{
+.btn-forumSearch {
     background-color: none !important;
     border: none;
     padding: 0 !important;
@@ -377,7 +359,9 @@
     background-repeat: no-repeat;
     background-position-y: center;
     /*margin: 20px auto;*/
-}Ffron
+}
+
+Ffron
 
 .forumPostCount {
     color: #888;
@@ -403,27 +387,27 @@
 }
 
 /*User Profiles*/
-.userProfile{
+.userProfile {
     padding: 32px 0 64px 24px;
     background-color: #fff;
 }
 
 #userProfileImage {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     background-color: #ddd;
     background-size: 100%;
 }
 
-#userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel{
+#userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
     display: block;
     color: #444;
     font-family: 'Roboto';
     padding-top: 3px;
 }
 
-#userName{
+#userName {
     display: block;
     color: #2569d5;
     font-family: 'Roboto';
@@ -514,7 +498,7 @@
 }
 
 .homeSearch {
-    width: 50%;
+    width: 70%;
     margin-top: 8px;
     background: rgba(0,0,0,0.1);
     padding: 8px;
@@ -526,14 +510,14 @@
     transition: ease-in 0.2s;
 }
 
-.homeSearch:focus {
-    border: none !important;
-    outline: none !important;
-    transition: ease-in 0.2s;
-    color: white;
-    background-color: rgba(0,0,0,0.7);
-    box-shadow: 0 5px 4px -6px #000;
-}
+    .homeSearch:focus {
+        border: none !important;
+        outline: none !important;
+        transition: ease-in 0.2s;
+        color: white;
+        background-color: rgba(0,0,0,0.7);
+        box-shadow: 0 5px 4px -6px #000;
+    }
 
 
 

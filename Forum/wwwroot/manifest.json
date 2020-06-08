@@ -1,5 +1,5 @@
 {
-  "name": "Forum Wydzia³u Zarz¹dzania Akademii Górniczo - Hutniczej w Krakowie",
+  "name": "Forum Wydzialu Zarzadzania AGH",
   "short_name": "Forum WZ",
   "description": "Forum for AGH's students",
   "icons": [
@@ -46,5 +46,6 @@
   "background_color": "#D3D3D3",
   "theme_color": "white",
   "dir": "ltr",
-  "lang": "pl-PL"
+  "lang": "pl-PL",
+  "prefer_related_applications": false
 }

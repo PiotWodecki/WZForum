@@ -2,14 +2,14 @@
 
 <div class="container body-content">
     <div class="row sectionHeader">
-        <div class="sectionHeading">Browse Forums</div>
+        <div class="sectionHeading">Przeszukaj forum</div>
         <div class="sectionDescription">
-            <p>Welcome to <strong>ForumWZ community</strong>. Posts are broadly categorized into separate forums by programming language or area of interest.</p>
+            <p>Witaj na <strong>ForumWZ</strong>. Posty są kategoryzowane w oddzielne fora Posts are broadly categorized into separate forums by programming language or area of interest.</p>
             <p>
-                Please read the Forum Guidelines before creating a new post.
+                Przeczytaj regulamin forum przed dodaniem postu.
                 @if (Context.User.Identity.IsAuthenticated)
                 {
-                    <span>You must be a <a asp-controller="Account" asp-action="Register">registered member</a> to create a new post.</span>
+                    <span>Musisz być <a asp-controller="Account" asp-action="Register">zarejestrowanym członkiem</a> by stworzyć post.</span>
                 }
             </p>
         </div>
@@ -38,10 +38,10 @@
                         </td>
                         <td>
                             <div class="forumPostCount">
-                                @forum.NumberOfPosts Posts
+                                @forum.NumberOfPosts Posty
                             </div>
                             <div class="forumMemberCount">
-                                @forum.NumberOfUsers Users
+                                @forum.NumberOfUsers Użytkownicy
                             </div>
                         </td>
                         <td>

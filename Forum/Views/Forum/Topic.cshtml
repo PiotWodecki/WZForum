@@ -8,16 +8,16 @@
             {
                 <span id="headingBtn">
                     <a asp-controller="Post" asp-action="Create" asp-route-id="@Model.Forum.Id" class="btn btn-newPost">
-                        Create new post
+                        Stwórz nowy post
                     </a>
                 </span>
             }
             <form asp-controller="Forum" asp-action="Search" method="post">
                 <div class="searchForm">
-                    <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)" />
+                    <input asp-for="SearchQuery" type="text" placeholder="Szukaj..." class="searchBar" onfocus="clearThis(this)" />
                     <button type="submit" class="btn btn-forumSearch">
                         <i class="material-icons">
-                            search
+                            Szukaj
                         </i>
                     </button>
                 </div>
@@ -26,16 +26,16 @@
         </div>
         <div class="sectionDescription">
             <div class="forumLogo" style="background-image: url(@Model.Forum.ImageUrl); background-size:100%"></div>
-                <p>Welcome to the <strong>@Model.Forum.Name</strong> forum. Please keep posts friendy and on-topic.</p>
+                <p>Witaj na <strong>@Model.Forum.Name</strong> forum. Proszę zostań w temacie postu, bądź przyjazny.</p>
                 @if(!Context.User.Identity.IsAuthenticated)
                 {
                     <p>
                         <span>
-                            You must be 
+                            Musisz być
                             <a asp-controller="Account" asp-action="Register">
-                                registered member
+                                zarejestrowanym członkiem
                             </a> 
-                            to create a new post.
+                            by dodawać posty.
                         </span>
                     </p>
                 }
@@ -71,7 +71,7 @@
                             </td>
                             <td>
                                 <div class="forumPostCount">
-                                    Replies: @post.RepliesCount
+                                    Odpowiedzi: @post.RepliesCount
                                 </div>
                             </td>
                             <td>
@@ -91,12 +91,12 @@
                     question_answer
                 </i> 
                 <h3>
-                    It look like there are no posts to be found.
-                    Why not post
+                    Nie znaleziono takich postów.
+                    Czemu sam nie dodasz
                     <a asp-controller="Post" asp-action="Create" asp-route-id="@Model.Forum.Id">
                         <span>Post</span>
                     </a>
-                    Something?
+                    czegoś?
                 </h3>
             </div>
         }

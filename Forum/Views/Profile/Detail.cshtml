@@ -6,7 +6,7 @@
 <div class="container body-content">
     <div class="row sectionHeader">
         <div class="sectionHeading">
-            User Profile
+            Profil użytkownika
         </div>
     </div>
     <div class="row userProfile">
@@ -17,11 +17,11 @@
                 <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="UploadProfileImage">
                     <div id="upload">
                         <label class="btn btn-default btn-file">
-                            Browse <input type="file" name="file" style="display: none" />
+                            Przeglądaj <input type="file" name="file" style="display: none" />
                         </label>
                     </div>
                     <button type="submit" id="btn-profile" class="btn btn-default">
-                        Submit
+                        Dodaj
                     </button>
                 </form>
             }
@@ -36,9 +36,9 @@
                     Admin
                 </span>
             }
-            <span id="userRating">Current rating: @Model.UserRating</span>
+            <span id="userRating">Punkty: @Model.UserRating</span>
             <span id="userEmailLabel">Email: @Model.Email</span>
-            <span id="userCreatedLabel">Member Since: @Model.MemberSince</span>
+            <span id="userCreatedLabel">Członek od: @Model.MemberSince</span>
         </div>
     </div>
     

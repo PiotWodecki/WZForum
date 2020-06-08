@@ -19,7 +19,7 @@ namespace ForumWZ
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:5566")
+                .UseUrls("https://*:5566")
                 .ConfigureAppConfiguration((builderContext, config) =>
                 {
                     IWebHostEnvironment env = builderContext.HostingEnvironment;

@@ -89,5 +89,10 @@ namespace ForumWZ.Controllers
 
             return View(model);
         }
+
+        //private string UrlHelper(string id)
+        //{
+
+        //}
     }
 }

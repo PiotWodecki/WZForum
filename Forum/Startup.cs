@@ -83,23 +83,6 @@ namespace ForumWZ
             app.UseAuthorization();
 
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    // Mapping of endpoints goes here:
-            //    //endpoints.MapRazorPages();
-            //    endpoints.MapControllerRoute("default", "{ controller = Home}/{ action = Index}/{ id ?}");
-            //});
-
-
-
-            //app.UseEndpoints(endpoints => endpoints.MapControllers(
-            //{
-            //    name:
-            //    "default",
-            //    template:
-            //    "{controller=Home}/{action=Index}/{id?}"
-            //}));
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -107,10 +90,6 @@ namespace ForumWZ
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapRazorPages();
-            //});
         }
     }
 }
