@@ -40,7 +40,7 @@
     }
   ],
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "/Forum",
   "scope": ".",
   "orientation": "portrait-primary",
   "background_color": "#D3D3D3",
